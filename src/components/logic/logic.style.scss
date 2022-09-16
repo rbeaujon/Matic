@@ -9,14 +9,15 @@
 	padding: 20px;
 	grid-template-columns: 30vw 33vw 30vw;
 	height: 80vh;
-	top: 8vh;
+	top: 12vh;
 	grid-gap: 0.5vw;
 		& h1{
-		color: rgba(63, 62, 62, 0.779);
+		color: rgba(122, 118, 118, 0.779);
 	}
-	& .item{
+	 .item{
 		position: relative;
 		padding: 5px;
+		top:10vh;
 		text-align: center;
 		height: 35%;
 		border-style: solid;
@@ -84,7 +85,7 @@
     overflow-wrap:break-word;
 	overflow-y: auto;
 	text-align: center;
-	box-shadow: 0px 1px 2px #888888;
+	
 
     
 

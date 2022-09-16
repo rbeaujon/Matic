@@ -1,21 +1,22 @@
 .App {
 	position: relative;
 	width: 1440px;
-	height: 1735px;
+	height: 500px;
 	left: 0px;
 	top: 80px;
 	background: #F9F9F9;
 }
-.button{
+.button {
 	position: absolute;
 	display: flex;
-	&.main  {
+	
+	&.main {
 		top: 50%;
 		left: 50%;
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 		
-		& button{
+		button{
 			margin: 5px;
 			width: 10vw;
 			background: linear-gradient(90deg, #31CF75 0%, #2DBBC6 100%);
@@ -27,32 +28,10 @@
 			color: aliceblue;
 			
 			&:hover {
-				background-color: #066376c1;
+				background: linear-gradient(90deg, #5fbb87 0%, #0b676dea 100%);
 				color:beige;
 			}	
 		}
 	}
 
-}
-.submenu{
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	& button{
-		margin: 5px;
-		width: 10vw;
-		background: linear-gradient(90deg, #31CF75 0%, #2DBBC6 100%);
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-		border-radius: 47px;
-		border:0;
-		padding: 5px;
-		font-size: 1.5vw;
-		color: aliceblue;
-		
-		&:hover {
-			background-color: #066e83ba;
-			color:beige;
-		}	
-	}
 }

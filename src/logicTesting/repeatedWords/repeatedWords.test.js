@@ -2,7 +2,7 @@ const repeatedWords = require('./repeatedWords');
 
 describe('Repeated Words Testing', () => {
 	test('Should have called the function with one valid string', () => {
-		expect('Bad Request').toStrictEqual(repeatedWords())
+		expect('Should be a phrase, try again!').toStrictEqual(repeatedWords())
 	})
 	test('Should receive 2 words counted', () => {
 		const string = "control control"

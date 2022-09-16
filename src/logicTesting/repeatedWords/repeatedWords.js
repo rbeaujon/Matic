@@ -1,12 +1,12 @@
 const repeatedWords = (string) => {
    let words = {}
    if(string){
-    const array = string.split(' ')
-    array.forEach(word => {
-    words[word] = (words[word] || 0) + 1
+    const array = string.toLowerCase().replace(/ +(?= )/g,'').split(' ')
+    array.forEach(x => {
+    words[x] = (words[x] || 0) + 1
   })
   }else {
-    words = 'Bad Request'
+    words = 'Should be a phrase, try again!'
   }
   return words
   }
