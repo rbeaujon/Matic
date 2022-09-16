@@ -1,0 +1,42 @@
+.navigation {
+	position: fixed;
+	width: 100vw;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+	background-color: #F9F9F9;
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	font-family: Hack, monospace;
+
+	& nav {
+		margin: 25px;
+		background: #f9f9f9;
+		padding: 16px;
+		& .menu {
+		  list-style: none;
+		  display: flex;
+	  
+		  li {
+			margin: 50px;
+			& :hover {
+				background-color: rgba(167, 163, 163, 0.597);
+				padding: 10px;
+				border-radius: 10px;
+			}
+	  
+			a {
+			  text-decoration: none;
+			  color: #8f8f8f;
+			  font-size: 24px;
+			  font-weight: 400;
+			  transition: all 0.5s ease-in-out;
+			  position: relative;
+			  text-transform: uppercase;
+			}
+		}
+		}
+	}  
+}

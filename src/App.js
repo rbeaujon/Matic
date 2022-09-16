@@ -1,19 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import './style.scss';
 
 function App() {
 
   const navigate = useNavigate();
 
-  // function handleClick() {
-  //   navigate("/dashboard");
-  // }
 
   return (
     <div className="App">
-        <div>
-          <button onClick={()=>navigate('/logic')}>Go to Logic</button>
-          <button onClick={()=>navigate('/dashboard')}>Go to Dashboard</button>
+        <div className="button main">
+          <button onClick={()=>navigate('/logic')}>Logic</button>
+          <button onClick={()=>navigate('/articles')}>Articles</button>
         </div>
     </div>
   );

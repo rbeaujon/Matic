@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import App from './App';
-import Dashboard from './components/dashboard';
-import Logic from './components/logic';
+import Articles from './components/articles/articles';
+import Logic from './components/logic/logic';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +12,7 @@ root.render(
           <>
       <BrowserRouter>
       <Routes>
-        <Route exact path="/dashboard" element={<Dashboard/>}/>
+        <Route exact path="/articles" element={<Articles/>}/>
         <Route exact path="/logic" element={ <Logic />}/>
         <Route exact path="/" element={ <App />}/>
       </Routes>
