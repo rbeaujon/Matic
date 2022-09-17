@@ -16,7 +16,7 @@ const cal = (num) => {
   }
   
   const fizzbuzz = (x) => {
-	const num = x==="" ? "" : Math.abs(Number(x))
+	const num = (x==="" || isNaN(x))  ? "" : Math.abs(Number(x))
 	if(num !==""){	
 		const numbers = num === 0 || num === 1 ? [0] : [0,1]
 		for(let i=1; i<=num; i++){

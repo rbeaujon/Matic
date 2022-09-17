@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
 import './logic.style.scss';
 import Menu from '../menu/menu';;
 
@@ -10,7 +9,6 @@ const fizzbuzz = require('../../logicTesting/fizzbuzz/fizzbuzz')
 
 function Logic() {
 
-  const navigate = useNavigate();
 
   const [calFibo, setCalFibo] = useState('')
   const fibo = (e) => {
@@ -22,7 +20,7 @@ function Logic() {
 
   const [words, setWords] = useState('')
   const repeated = (e) => {
-    const resp = JSON.stringify(repeatedWords(e))
+    const resp = repeatedWords(e);
     setCalFibo('')
     setFizzbuzz('')
     setWords(resp)

@@ -222,6 +222,10 @@
 			top: 0;
 			float: right;
 			padding: 2%;
+			&:hover {
+				color:#070707;
+				background:#a4290ded;
+			}
 		}
 	}
 

@@ -13,23 +13,23 @@
 	grid-gap: 0.5vw;
 		& h1{
 		color: rgba(122, 118, 118, 0.779);
+		font-size: 2vw;
 	}
 	 .item{
 		position: relative;
 		padding: 5px;
 		top:10vh;
 		text-align: center;
-		height: 35%;
+		height: 15vw;
 		border-style: solid;
 		border-color: rgb(193, 197, 196);
 		border-radius: 5px;
 		box-shadow: 0px 9px 20px #888888;
 
 		& input {
-			top: 90px;
-			width: 150px;
-			height: 70px;
-			font-size: 20px;
+			width: 11vw;
+			height: 5vw;
+			font-size: 1vw;
 			border-style: solid;
 			border-color: rgb(160, 166, 164);
 			border-radius: 5px;
@@ -39,10 +39,9 @@
 			}
 		}
 		& textarea{
-			top: 90px;
-			width: 400px;
-			height: 70px;
-			font-size: 20px;
+			width: 28vw;
+			height: 6vw;
+			font-size: 1vw;
 			border-style: solid;
 			border-color: rgb(160, 166, 164);
 			border-radius: 5px;
@@ -57,12 +56,12 @@
 			border-radius: 5px;
 			border:0;
 			color:rgb(255, 255, 255);
-			top: 130px;
-			width: 155px;
-			height: 30px;
+			width: 11vw;
+			height: 2vw;
+			margin-top: 0.2vw;
+			font-size: 1vw;
 			&.words {
-				top: 160px;
-				width: 405px;
+				width: 28vw;
 			}
 			&:hover {
 				background: linear-gradient(90deg, #2d9b5d 0%, #2b7378 100%);

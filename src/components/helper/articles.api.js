@@ -38,7 +38,17 @@ const Articles = async (header) => {
 		}
 	}
 	if(method==="PATCH"){
-
+		const json = JSON.parse(body)
+		const id = json.articleID;
+		const URL = "https://www.api.recruitment.matic.io/articles/"+id;
+		const rawResponse = await fetch(URL, header);
+		const response = await rawResponse.json();
+		if (rawResponse.status === 200) {
+			return response
+		} else {
+			const errorResponse =[{"status":rawResponse.status}, {"error":rawResponse.statusText}]
+			return errorResponse;
+		}
 	}
 
 }

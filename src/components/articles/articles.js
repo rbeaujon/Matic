@@ -7,7 +7,6 @@ const Dashboard = () => {
 	const [articles, setArticles] = useState();
 	const [lastest, setLastest] = useState();
 	const [show, setShow] = useState("hidden");
-	// /const showPop = show === "show" ? "hidden" : "show";
 
 
 	const getArticles = async () => {
@@ -82,35 +81,45 @@ const Dashboard = () => {
 			return "Error deleting the article";
 		}
 	}
-	const fillEditArticles = (author, title, content) => {
+	const fillEditArticles = (author, title, content, id) => {
 		if(author !== undefined || title !== undefined || content !== undefined) {
+			document.getElementById('editId').value = id
 			document.getElementById('editAuthor').value = author
 			document.getElementById('editTitle').value = title
 			document.getElementById('editBlog').value = content
 		}
 
 	}
-	const editArticle = async (id) => {
-		const articleToEdit = {"articleID": id}
-		
-		
+	const editArticle = async () => {
 
-		// const header = {
-		// 	method: 'PATCH',
-		// 	headers: {
-		// 	  'Accept': 'application/json',
-		// 	  'Content-Type': 'application/json'
-		// 	},
-		// 	body: JSON.stringify(articleToDelete)
-		//   };
-		// const resp = await Articles(header);
+		const id = document.getElementById('editId').value
+		const author = document.getElementById('editAuthor').value
+		const title = document.getElementById('editTitle').value
+		const content = document.getElementById('editBlog').value
+		const articleToEdit = {
+			"articleID": id,
+			"author": author,
+			"title": title,
+			"content": content
+		}
+		const header = {
+			method: 'PATCH',
+			headers: {
+			  'Accept': 'application/json',
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(articleToEdit)
+		  };
+		const resp = await Articles(header);
 
-		// if(resp.statusCode === 200) {
-		// 	await getArticles()
-		// 	return "Article created succesfully"
-		// } else {
-		// 	return "Error deleting the article";
-		// }
+		if(resp.statusCode === 200) {
+			setShow("hidden")
+			await getArticles()
+		
+			return "Article created succesfully"
+		} else {
+			return "Error deleting the article";
+		}
 	}
 
 	useEffect(() => {
@@ -168,7 +177,7 @@ const Dashboard = () => {
 								<td id="content">{key.content}</td>
 								<td id="date">{(key.createdAt).slice(0,10).split('-').reverse().join('/')}</td>
 								<td id="delete" onClick={()=> delArticle(key.id)}>Delete</td>
-								<td id="edit" onClick={() => { setShow("show"); fillEditArticles(key.author,key.title, key.content) }}>Edit</td>
+								<td id="edit" onClick={() => { setShow("show"); fillEditArticles(key.author,key.title, key.content, key.id) }}>Edit</td>
 							</tr>
 						
 							) 
@@ -192,8 +201,9 @@ const Dashboard = () => {
 						<label for="cblog">Blog Content</label><br/>
 						<textarea type="text" id="editBlog" name="cblog"></textarea>
 					</div>
+					<input id="editId" type="hidden"  />
 					<div>
-						<button id="save"  onClick={ () =>  {editArticle()}}>Save</button>
+						<button id="save" onClick={ () =>  {editArticle()}}>Save</button>
 					</div>
 				</div>
 			</div>
