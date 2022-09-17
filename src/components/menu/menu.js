@@ -10,9 +10,9 @@ const Menu = () => {
 		<div className='navigation'>
 			<nav>
 				<ul class="menu">
-					<li><a onClick={()=>navigate("/")}>Main menu</a></li>
-					<li><a onClick={()=>navigate("/logic")}>Logic</a></li>
-					<li><a onClick={()=>navigate("/articles")}>Articles</a></li>
+					<li><div onClick={()=>navigate("/matic")}>Main menu</div></li>
+					<li><div onClick={()=>navigate("/logic")}>Logic</div></li>
+					<li><div onClick={()=>navigate("/articles")}>Articles</div></li>
 				</ul>
 			</nav>
 	 	</div>

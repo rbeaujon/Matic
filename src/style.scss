@@ -1,9 +1,8 @@
 .App {
 	position: relative;
-	width: 1440px;
-	height: 500px;
-	left: 0px;
-	top: 80px;
+	width: 100vw;
+	height: 100vh;
+	top: 50%;
 	background: #F9F9F9;
 }
 .button {
@@ -31,5 +30,56 @@
 			}	
 		}
 	}
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+
+/* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
+
+
+/****** PORTRAIT *************/
+@media  only screen 
+and (min-device-width: 410px) 
+and (orientation: portrait)   {
+	.main {
+		display: block;	
+		width: 50vw;
+		height: 20vh;	
+		left: 20vw !important;
+
+		
+		button {
+			margin: 2vw !important;
+			width: 50vw !important;
+			padding: 15px !important;
+			font-size: 3vw !important;
+			
+
+		}
+	}
+
+  }
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-device-width: 410px) 
+and (orientation: landscape)  {
+
+}
+
+
+
+/****** PORTRAIT *************/
+@media  only screen 
+and (min-device-width: 300px) 
+and (orientation: portrait)   {
+
+}
+
+/****** LANDSCAPE *************/
+@media  only screen 
+and (min-device-width: 300px) 
+and (orientation: landscape)   {
 
 }

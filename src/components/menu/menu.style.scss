@@ -18,7 +18,7 @@
 		& .menu {
 		  list-style: none;
 		  display: flex;
-	  
+		  gap: 15px;
 		  li {
 			margin: 50px;
 			& :hover {
@@ -27,11 +27,11 @@
 				border-radius: 10px;
 			}
 	  
-			a {
+			div {
 			  text-decoration: none;
 			  color: #8f8f8f;
 			  font-size: 24px;
-			  font-weight: 400;
+			  font-weight: 400px;
 			  transition: all 0.5s ease-in-out;
 			  position: relative;
 			  text-transform: uppercase;
@@ -39,4 +39,43 @@
 		}
 		}
 	}  
+}
+
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+
+/* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
+
+
+/****** PORTRAIT *************/
+@media  only screen 
+and (min-device-width: 410px) 
+and (orientation: portrait)   {
+	.navigation {
+		
+		nav {
+			.menu {
+				li {
+					margin: 5px;
+					font-size: 4px;
+					
+					div {
+						font-size: 15px;
+					}
+				}
+				
+			}
+
+		}
+	
+	}
+
+  }
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-device-width: 410px) 
+and (orientation: landscape)  {
+
 }

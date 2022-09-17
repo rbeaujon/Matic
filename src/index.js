@@ -9,12 +9,12 @@ import Logic from './components/logic/logic';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-          <>
+      <>
       <BrowserRouter>
       <Routes>
         <Route exact path="/articles" element={<Articles/>}/>
         <Route exact path="/logic" element={ <Logic />}/>
-        <Route exact path="/" element={ <App />}/>
+        <Route exact path="/matic" element={ <App />}/>
       </Routes>
       </BrowserRouter>
       </>
