@@ -12,7 +12,7 @@ function Logic() {
 
   const [calFibo, setCalFibo] = useState('')
   const fibo = (e) => {
-    const resp = fibonacci(e).toString()
+    const resp = fibonacci(e).toString().replaceAll(',', ', ')
     setWords('')
     setFizzbuzz('')
     setCalFibo(resp)
@@ -20,7 +20,7 @@ function Logic() {
 
   const [words, setWords] = useState('')
   const repeated = (e) => {
-    const resp = repeatedWords(e);
+    const resp =JSON.stringify(repeatedWords(e)).replace(/[{}"]/g, "").replaceAll(',', ', ')
     setCalFibo('')
     setFizzbuzz('')
     setWords(resp)
@@ -29,7 +29,7 @@ function Logic() {
 
   const [calFizzbuzz, setFizzbuzz] = useState('')
   const fizz = (e) => {
-    const resp = fizzbuzz(e)
+    const resp = fizzbuzz(e).replaceAll(',', ', ')
     setCalFibo('')
     setWords('')
     setFizzbuzz(resp)
