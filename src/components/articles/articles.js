@@ -1,25 +1,125 @@
 import React, {useState, useEffect} from 'react';
 import './articles.style.scss';
 import Articles from '../helper/articles.api';
-import Menu from '../menu/menu';;
+import Menu from '../menu/menu';
 
 const Dashboard = () => {
 	const [articles, setArticles] = useState();
 	const [lastest, setLastest] = useState();
+	const [show, setShow] = useState("hidden");
+	// /const showPop = show === "show" ? "hidden" : "show";
 
 
 	const getArticles = async () => {
-		const method = "GET"
-		const resp = await Articles(method);
+
+		const header = {
+			method: 'GET',
+			headers: {
+			  'Accept': 'application/json',
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({a: 1, b: 'Textual content'})
+		  };
+		const resp = await Articles(header);
 		const data = await resp.data
 		
 		setArticles(data)
-		setLastest(data.slice(0,4))
+		setLastest(data.slice(-4))
+	}
+	const postArticles = async () => {
+		const newPost = {
+			"author": document.getElementById('nauthor').value,
+			"title": document.getElementById('btitle').value,
+			"content": document.getElementById('cblog').value
+		}
+		const header = {
+			method: 'POST',
+			headers: {
+			  'Accept': 'application/json',
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(newPost)
+		  };
+		const resp = await Articles(header);
+
+		if (resp.statusCode === 201) {
+			await getArticles()
+			
+			//Cleaning form
+			const author = document.getElementById('nauthor')
+			const title = document.getElementById('btitle')
+			const content = document.getElementById('cblog')
+
+			author.value =""; 
+			title.value = ""; 
+			content.value="";
+			
+
+			return "Article created succesfully";
+			
+		} else {
+			const errorResponse =[{"status":resp.status}, {"error":resp.statusText}]
+			return errorResponse;
+		}
+
+	}
+	const delArticle = async (id) => {
+		const articleToDelete = {"articleID": id}
+		const header = {
+			method: 'DELETE',
+			headers: {
+			  'Accept': 'application/json',
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(articleToDelete)
+		  };
+		const resp = await Articles(header);
+
+		if(resp.statusCode === 200) {
+			await getArticles()
+			return "Article created succesfully"
+		} else {
+			return "Error deleting the article";
+		}
+	}
+	const fillEditArticles = (author, title, content) => {
+		if(author !== undefined || title !== undefined || content !== undefined) {
+			document.getElementById('editAuthor').value = author
+			document.getElementById('editTitle').value = title
+			document.getElementById('editBlog').value = content
+		}
+
+	}
+	const editArticle = async (id) => {
+		const articleToEdit = {"articleID": id}
+		
+		
+
+		// const header = {
+		// 	method: 'PATCH',
+		// 	headers: {
+		// 	  'Accept': 'application/json',
+		// 	  'Content-Type': 'application/json'
+		// 	},
+		// 	body: JSON.stringify(articleToDelete)
+		//   };
+		// const resp = await Articles(header);
+
+		// if(resp.statusCode === 200) {
+		// 	await getArticles()
+		// 	return "Article created succesfully"
+		// } else {
+		// 	return "Error deleting the article";
+		// }
 	}
 
 	useEffect(() => {
 		getArticles()
-	})
+	},[])
+	
+	useEffect(() => {
+		fillEditArticles()
+	},[show])
 	
 	
 	return (
@@ -36,14 +136,14 @@ const Dashboard = () => {
 					</div>
 					<div id="blogTitle">
 						<label for="blog">Blog Title</label><br/>
-  						<input type="text" id="nblog" name="nblog"></input>
+  						<input type="text" id="btitle" name="btitle"></input>
 					</div>
 					<div id="blogContent">
 						<label for="cblog">Blog Content</label><br/>
   						<textarea type="text" id="cblog" name="cblog"></textarea>
 					</div>
 					<div>
-						<button  onClick="">Save</button>
+						<button  onClick={ () =>  postArticles()}>Save</button>
 					</div>
 				</div>
 			</div>
@@ -63,12 +163,12 @@ const Dashboard = () => {
 					{articles && articles.map((key) => {
 						return ( 
 							<tr>
-								<td>{key.author}</td>
-								<td>{key.title}</td>
-								<td className='content'>{key.content}</td>
-								<td>{(key.createdAt).slice(0,10).split('-').reverse().join('/')}</td>
-								<td>Delete</td>
-								<td>Edit</td>
+								<td id="author">{key.author}</td>
+								<td id="title">{key.title}</td>
+								<td id="content">{key.content}</td>
+								<td id="date">{(key.createdAt).slice(0,10).split('-').reverse().join('/')}</td>
+								<td id="delete" onClick={()=> delArticle(key.id)}>Delete</td>
+								<td id="edit" onClick={() => { setShow("show"); fillEditArticles(key.author,key.title, key.content) }}>Edit</td>
 							</tr>
 						
 							) 
@@ -76,6 +176,28 @@ const Dashboard = () => {
 					</table>
 				</div>	
 			</div>	
+			<div className={show}>
+			<div className='editArticles '>
+				<div className='containerEditArticle'>
+					<button id="close" onClick={() =>setShow("hidden")}>X</button>
+					<div id="author">
+						<label for="author">Author</label><br/>
+						<input type="text" id="editAuthor" name="nauthor"></input>
+					</div>
+					<div id="blogTitle">
+						<label for="blog">Blog Title</label><br/>
+						<input type="text" id="editTitle" name="btitle"></input>
+					</div>
+					<div id="blogContent">
+						<label for="cblog">Blog Content</label><br/>
+						<textarea type="text" id="editBlog" name="cblog"></textarea>
+					</div>
+					<div>
+						<button id="save"  onClick={ () =>  {editArticle()}}>Save</button>
+					</div>
+				</div>
+			</div>
+			</div>
 			<div className='latestArticles'>
 				<div className='mainTitle'>Lastest Articles</div>
 				<div className='containerLastArticles'>
