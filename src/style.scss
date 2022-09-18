@@ -74,7 +74,22 @@ and (orientation: landscape)  {
 @media  only screen 
 and (min-device-width: 300px) 
 and (orientation: portrait)   {
+	.main {
+		display: block ;	
+		width: 50vw;
+		height: 20vh;	
+		left: 20vw !important;
 
+		
+		button {
+			margin: 2vw !important;
+			width: 50vw !important;
+			padding: 15px !important;
+			font-size: 3vw !important;
+			
+
+		}
+	}
 }
 
 /****** LANDSCAPE *************/

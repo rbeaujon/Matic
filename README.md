@@ -1,27 +1,36 @@
 The following project is an application created in React version 18.2.0 to show 3 logic functions (Fibonacci, Count Words, FizzBuzz) and one SPA to manages one CRUD API .
 <p>
-I used an API of https://polygon.io/ with an APIKey; the blocked send requests are handled to avoid errors given by the API such as 429.
+The App has unit testing for all modules with JEST using react-scripts: 5.0.1.
 <p>
-Likewise, a simple but informative design is maintained with colors when the currency rises or falls or if there is a connection failure, it is reported via a status bar.
+The API is https://www.api.recruitment.matic.io/docs/#/Articles/. The desing was provided by Figma document and adapted for work on mobile with Middle and High Resolutions in portrait mode.
+
 
 ## Technical details
 
-Front-End: Angular, Typescript and CSS
+Front-End: React, JS and SCSS
 
-<img src="/documentation/diagram.png" width="80%">
+<img src="/assets/documentation/diagram.png" width="80%">
 
 ## Views
 
-#### Daily opening and closing request
-<img src="/documentation/app.png" width="80%">
+#### Previous Articles
+<img src="/assets/screenshots/previousArticles.png" width="80%">
 
-#### Fail request
-<img src="/documentation/no_access.png" width="80%">
+#### Edit Articles
+<img src="/assets/screenshots/editArticles.png" width="80%">
 
+#### Lastest Articles
+<img src="/assets/screenshots/lastArticles.png" width="80%">
+
+#### Add Articles
+<img src="/assets/screenshots/addArticles.png" width="80%">
+
+#### Logic
+<img src="/assets/screenshots/logic.png" width="80%">
 
 ## Project Hosting
 
-<https://aistica.com/brainbase/>
+<https://aistica.com/matic/>
 
 ## Available Scripts
 
@@ -30,19 +39,19 @@ In the project directory, you can run:
 ### `ng serve`
 
 To view in the browser
-Local [http://localhost:4200]
+Local [http://localhost:3000]
 
-Remote [https://aistica.com/brainbase]
+Remote [https://aistica.com/matic]
 
 ## API Endpoints
 
-#### POLYGON.io
+#### api.recruitment.matic.io
 
-* [https://api.polygon.io/v1/open-close/crypto/{crypto-symbol}/{currency}/{date}?adjusted=true&apiKey={APIkey}]
+* [https://www.api.recruitment.matic.io/articles/{articleID}]
 
 ## Outscope
   
     * More elegant UI.
-    * better selection of the date in the calendar.
-    * Improve error detection.
+    * Media queries for landscape.
+    * Improve errors detections.
     * Perform automated tests.
