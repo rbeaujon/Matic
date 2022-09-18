@@ -2,25 +2,25 @@
 	position: fixed;
 	width: 100vw;
 	height: 50px;
-	left: 0px;
-	top: 0px;
 	background-color: #F9F9F9;
 	display: flex;
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
 	font-family: Hack, monospace;
+	
 
 	& nav {
-		margin: 25px;
 		background: #f9f9f9;
-		padding: 16px;
+		text-align: center;
 		& .menu {
 		  list-style: none;
 		  display: flex;
-		  gap: 15px;
+		  gap: 1vw;
+		  margin-left: 30vw;
 		  li {
-			margin: 50px;
+			width: 10vw;
+			text-align: center;
 			& :hover {
 				background-color: rgba(167, 163, 163, 0.597);
 				padding: 10px;
@@ -28,13 +28,13 @@
 			}
 	  
 			div {
-			  text-decoration: none;
-			  color: #8f8f8f;
-			  font-size: 24px;
-			  font-weight: 400px;
-			  transition: all 0.5s ease-in-out;
-			  position: relative;
-			  text-transform: uppercase;
+				text-decoration: none;
+			  	color: #8f8f8f;
+			  	font-size: 24px;
+			  	font-weight: 400px;
+			 	transition: all 0.5s ease-in-out;
+			  	position: relative;
+			  	text-transform: uppercase;
 			}
 		}
 		}
@@ -48,17 +48,56 @@
 
 
 /****** PORTRAIT *************/
-@media  only screen 
-and (min-device-width: 410px) 
+@media  only screen 	
+and (min-width : 320px)
+and (max-width : 568px) 
 and (orientation: portrait)   {
 	.navigation {
 		
 		nav {
 			.menu {
+				margin-left: 4vw;
 				li {
-					margin: 5px;
+					width: 23vw;
+					div {
+						font-size: 12px;
+					}
+				}
+				
+			}
+
+		}
+	
+	}
+
+  }
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-width : 320px)
+and (max-width : 568px) 
+and (orientation: landscape)  {
+
+}
+
+
+/* TABLES RESOLUTIONS  Tables, Galaxy Flod2 etc.. */ 
+
+/****** PORTRAIT *************/
+
+@media  only screen 
+and (min-width : 569px)
+and (max-width : 1024px) 
+and (orientation: portrait)   {
+	.navigation {
+		
+		nav {
+			.menu {
+				margin-left: 26vw;
+				li {
 					font-size: 4px;
-					
+					width: 12vw;
 					div {
 						font-size: 15px;
 					}
@@ -75,44 +114,8 @@ and (orientation: portrait)   {
 /****** LANDSCAPE *************/
 
 @media  only screen 
-and (min-device-width: 410px) 
-and (orientation: landscape)  {
-
-}
-
-
-/* MID RESOLUTION with small screen such as Iphone SE, Samsung Galaxy S8+ */ 
-
-/****** PORTRAIT *************/
-
-@media  only screen 
-and (min-device-width: 310px) 
-and (orientation: portrait)  {
-	.navigation {
-		
-		nav {
-			.menu {
-				li {
-					margin: 5px;
-					font-size: 4px;
-					
-					div {
-						font-size: 12px;
-					}
-				}
-				
-			}
-
-		}
-	
-	}
-
-}
-
-/****** LANDSCAPE *************/
-
-@media  only screen 
-and (min-device-width: 310px) 
+and (min-width : 569px)
+and (max-width : 1024px) 
 and (orientation: landscape)  {
 
 }

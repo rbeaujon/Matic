@@ -52,6 +52,7 @@ Remote [https://aistica.com/matic]
 ## Outscope
   
     * More elegant UI.
+    * Loading for Previous Articles
     * Media queries for landscape.
     * Improve errors detections.
     * Perform automated tests.

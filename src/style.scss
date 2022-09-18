@@ -39,7 +39,8 @@
 
 /****** PORTRAIT *************/
 @media  only screen 
-and (min-device-width: 410px) 
+and (min-width : 320px)
+and (max-width : 568px) 
 and (orientation: portrait)   {
 	.main {
 		display: block;	
@@ -63,22 +64,26 @@ and (orientation: portrait)   {
 /****** LANDSCAPE *************/
 
 @media  only screen 
-and (min-device-width: 410px) 
+and (min-width : 320px)
+and (max-width : 568px) 
 and (orientation: landscape)  {
 
 }
 
 
+/* TABLES RESOLUTIONS  Tables, Galaxy Flod2 etc.. */ 
+
 
 /****** PORTRAIT *************/
 @media  only screen 
-and (min-device-width: 300px) 
+and (min-width : 569px)
+and (max-width : 1024px) 
 and (orientation: portrait)   {
 	.main {
-		display: block ;	
+		display: block;	
 		width: 50vw;
 		height: 20vh;	
-		left: 20vw !important;
+		left: 0vw !important;
 
 		
 		button {
@@ -94,7 +99,8 @@ and (orientation: portrait)   {
 
 /****** LANDSCAPE *************/
 @media  only screen 
-and (min-device-width: 300px) 
+and (min-width : 569px)
+and (max-width : 1024px) 
 and (orientation: landscape)   {
 
 }

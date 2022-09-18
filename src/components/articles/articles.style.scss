@@ -1,14 +1,18 @@
-.articles {
+* {
+	box-sizing: content-box;
+}
+
+articles {
 	background-color: #F9F9F9;
 	position: relative;
-	height: 2049px;
-	width: 1440px;
+	height: 100vh;
+	width: 100vw;
 	.mainTitle {
 		position: absolute;
 		font-family: 'Public Sans';
 		font-style: normal;
 		font-weight: 400px;
-		font-size: 35px;
+		font-size: 30px;
 		line-height: 62px;
 		left: 1vw;
 		letter-spacing: -0.02em;
@@ -17,33 +21,32 @@
 }
 .addArticle {
 	position: relative;
-	height: 850px;
+	height: 800px;
 	top: 40px;
 	.containerNewArticle {
-		box-sizing: border-box;
+		border-style: groove;
 		position: absolute;
-		width: 693px;
-		height: 710px;
-		left: 374px;
+		height: 70vh;
+		width: 50vw;
+		left: 25vw;
 		top: 86px;
 		background: #FFFFFF;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 		border-radius: 41px;
+		label {
+			font-family: 'Public Sans';
+			font-style: normal;
+			font-size: 16px;
+			line-height: 20px;
+			
+		}
 
 		& #author {
 			padding: 32px 50px 15px;
-			label {
-				font-family: 'Public Sans';
-				font-style: normal;
-				font-weight: 500px;
-				font-size: 14px;
-				line-height: 20px;
-			}
+
 			input {		
-				width: 576px;
-				height: 74px;
-				left: 0px;
-				top: 0px;
+				width: 43vw;
+				height: 10vh;
 				background: #FFFFFF;
 				border: 1px solid #D1D5DB;
 				box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
@@ -55,16 +58,9 @@
 		}
 		& #blogTitle {
 			padding: 0px 50px;
-			label {
-				font-family: 'Public Sans';
-				font-style: normal;
-				font-weight: 500px;
-				font-size: 14px;
-				line-height: 20px;
-			}
 			input {		
-				width: 576px;
-				height: 74px;
+				width: 43vw;
+				height: 10vh;
 				left: 0px;
 				top: 0px;
 				background: #FFFFFF;
@@ -78,18 +74,10 @@
 		}
 		& #blogContent {
 			padding: 15px 50px;
-			label {
-				font-family: 'Public Sans';
-				font-style: normal;
-				font-weight: 500;
-				font-size: 14px;
-				line-height: 20px;
-				color: #2D314E;
-			}
 			textarea  {
 				box-sizing: border-box;
-				width: 580px;
-				height: 333px;
+				width: 43.5vw;
+				height: 20vh;
 				background: #FFFFFF;
 				border: 1px solid #D1D5DB;
 				box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
@@ -101,7 +89,7 @@
 		}
 		& button {
 			position: absolute;
-			width: 576px;
+			width: 43vw;
 			height: 50px;
 			margin: 10px 0px 32px 45px;
 			background: linear-gradient(90deg, #84E1A7 0%, #81D6DB 100%);
@@ -124,9 +112,9 @@
 	.containerEditArticle {
 		box-sizing: border-box;
 		position: absolute;
-		width: 693px;
+		width: 48vw;
 		height: 740px;
-		left: 374px;
+		left: 25vw;
 		background: #736f6fdd;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.186);
 		border-radius: 41px;
@@ -217,6 +205,7 @@
 		& #close {
 			background:#b72302;
 			border-color: #c31206;
+			border-radius: 0 47px 0 0;
 			font-size: 20px;
 			color:#f2ebea;
 			top: 0;
@@ -232,17 +221,16 @@
 }
 .previousArticles {
 	position: relative; 
-	height: 900px; 
+	height: 700px; 
 }
 .showArticles {
 	width: 100vw;
 	table {
 		top: 150px;
-		width: 1090px;
-		height: 353px;
-		left: 160px;
+		width: 70vw;
+		height: 60vh;
+		left: 15vw;
 		position: absolute;
-		justify-content: center;
 		border: 1px solid #E5E7EB;
 		background: #FFFFFF;
 		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
@@ -254,17 +242,18 @@
 
 	& #author {
 		text-align: center;
-		padding: 16px 24px;
+		width: 5vw;
 	}
 	& #title, #date {
-		width: 6vw;
+		width: 5vw;
 	}
 	& #content {
-		width: 35vw;
 		display: inline-block;
 		white-space: nowrap;
-		overflow: hidden !important;
+		overflow: hidden;
 		text-overflow: ellipsis;
+		width: 45vw;
+		padding-top: 21px;
 	}
 	& #delete {
 		width: 5vw;
@@ -293,14 +282,14 @@
 		position: absolute;
 		display:grid;
 		grid-template-columns: 20vw 20vw 20vw 20vw;
-		gap: 20px;
+		gap: 1vw;
 		height: 400px;
 		padding: 40px;
 		margin: 5%;
 		
 		img {
-			width: 260px;
-			height: 194.76px;	
+			width: 19vw;
+			height:20vh;	
 		}
 		
 		#author {
@@ -353,4 +342,297 @@
 }
 .hidden{
 	display: none;
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+
+/* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
+
+
+/****** PORTRAIT *************/
+@media  only screen 
+and (min-width : 320px)
+and (max-width : 568px) 
+and (orientation: portrait)   {
+	.articles .mainTitle {
+		font-weight: 100px;
+		font-size: 10px;
+	}
+	.addArticle {
+		height: 780px;
+		.containerNewArticle {
+				width: 80vw;
+				left: 8vw;
+				label {
+					font-size: 12px;
+				}
+				#author {
+					padding: 32px 15px 15px; 
+					input  {
+						width: 70vw;
+					}
+				}
+				#blogTitle {
+					padding: 0px 15px; 
+					input {
+						width: 70vw;
+					}
+				}
+				#blogContent {
+					padding: 0px 15px; 
+					textarea {
+						width: 72vw;
+					}
+				}
+				button {
+					margin: 10px 0px 32px 12px;
+					width: 70vw;
+					border-radius: 15px;
+				}
+			}
+
+
+	}
+	.editArticles { 
+		.containerEditArticle {
+			height: 65vh;
+			left: 12vw;
+			top: 7vh;
+			width: 70vw;
+			#author {
+				padding: 32px 15px 15px; 
+				input  {
+					width: 60vw;
+				}
+			}
+			#blogTitle {
+				padding: 0px 15px; 
+				input {
+					width: 60vw;
+				}
+			}
+			#blogContent {
+				padding: 0px 15px; 
+				textarea {
+					width: 62vw;
+					height: 20vh;
+				}
+			}
+			#save {
+				margin: 10px 0px 32px 12px;
+				width: 60vw;
+				border-radius: 15px;
+			}
+		}
+	}
+	.previousArticles{
+		height: 650px; 
+	}
+	.showArticles {
+		table {
+			left: 2.5vw;
+			width: 90vw;
+			height: 70vh;
+			top: 10vh;
+			font-size: 10px;
+			
+			th {
+				font-size: 12px;
+			}
+		}
+		#author {
+			padding: 2px 0px;
+			width: 0.5vw;
+		}
+		& #title, #date {
+			width: 12vw;
+		}
+		#content {
+			width: 35vw;
+		}
+	}
+	.latestArticles {
+		height: 400px; 
+		.containerLastArticles {
+			grid-template-columns: 5vw 5vw 5vw 5vw;
+			gap: 17vw;
+			padding: 0;
+			top: 7vh;
+			img {
+				width: 20vw;
+				height: 10vh;	
+			}
+			#author {
+				font-size: 10px;
+				width: 20vw;
+			}
+			#title {
+				font-size: 12px;
+				width: 20vw;
+			}
+			#content {
+				font-size: 10px;
+				width: 20vw;
+				text-align: left;
+			}
+			
+		}
+	}
+	.footer {
+		width: 100vw;
+		height: 15vh;
+	}
+  }
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-width : 320px)
+and (max-width : 568px) 
+and (orientation: landscape)  {
+
+}
+
+
+/* TABLES RESOLUTIONS  Tables, Galaxy Flod2 etc.. */ 
+
+/****** PORTRAIT *************/
+
+@media  only screen 
+and (min-width : 569px)
+and (max-width : 1024px) 
+and (orientation: portrait)  {
+	.articles .mainTitle {
+		font-weight: 100px;
+		font-size: 10px;
+	}
+	.addArticle {
+		height: 950px;
+		.containerNewArticle {
+		width: 80vw;
+		left: 8vw;
+		label {
+			font-size: 12px;
+		}
+		#author {
+			padding: 32px 40px 10px; 
+			input  {
+				width: 70vw;
+			}
+		}
+		#blogTitle {
+			padding: 0px 40px; 
+			input {
+				width: 70vw;
+			}
+		}
+		#blogContent {
+			padding: 10px 40px; 
+			textarea {
+				width: 72vw;
+			}
+		}
+		button {
+			margin: 10px 0px 40px 40px;
+			width: 70vw;
+			border-radius: 15px;
+		}
+	}
+	}
+	.editArticles { 
+		.containerEditArticle {
+			height: 74vh;
+			left: 30vw;
+			#author {
+				padding: 32px 15px 15px; 
+				input  {
+					width: 43vw;
+				}
+			}
+			#blogTitle {
+				padding: 0px 15px; 
+				input {
+					width: 43vw;
+				}
+			}
+			#blogContent {
+				padding: 0px 15px; 
+				textarea {
+					width: 43vw;
+				}
+			}
+			
+			#save {
+				margin: 10px 0px 32px 12px;
+				width: 43vw;
+				border-radius: 15px;
+			}
+		}
+	}
+	.previousArticles{
+		height: 800px; 
+	}
+	.showArticles {
+		table {
+			left: 5vw;
+			width: 90vw;
+			height: 70vh;
+			top: 10vh;
+			font-size: 10px;
+			
+			th {
+				font-size: 12px;
+			}
+		}
+		#author {
+			padding: 2px 0px;
+			width: 0.5vw;
+		}
+		& #title, #date {
+			width: 12vw;
+		}
+		#content {
+			width: 45vw;
+		}
+	}
+	.latestArticles {
+		height: 400px; 
+		.containerLastArticles {
+			grid-template-columns: 5vw 5vw 5vw 5vw;
+			gap: 17vw;
+			padding: 12px;
+			top: 7vh;
+			img {
+				width: 20vw;
+				height: 10vh;	
+			}
+			#author {
+				font-size: 10px;
+				width: 20vw;
+			}
+			#title {
+				font-size: 12px;
+				width: 20vw;
+			}
+			#content {
+				font-size: 10px;
+				width: 20vw;
+				text-align: left;
+			}
+			
+		}
+	}
+	.footer {
+		width: 100vw;
+		height: 15vh;
+	}
+}
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-width : 569px)
+and (max-width : 1024px) 
+and (orientation: landscape)  {
+
 }
