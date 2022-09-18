@@ -79,3 +79,40 @@ and (min-device-width: 410px)
 and (orientation: landscape)  {
 
 }
+
+
+/* MID RESOLUTION with small screen such as Iphone SE, Samsung Galaxy S8+ */ 
+
+/****** PORTRAIT *************/
+
+@media  only screen 
+and (min-device-width: 310px) 
+and (orientation: portrait)  {
+	.navigation {
+		
+		nav {
+			.menu {
+				li {
+					margin: 5px;
+					font-size: 4px;
+					
+					div {
+						font-size: 12px;
+					}
+				}
+				
+			}
+
+		}
+	
+	}
+
+}
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-device-width: 310px) 
+and (orientation: landscape)  {
+
+}

@@ -13,7 +13,11 @@ function Logic() {
   const [calFibo, setCalFibo] = useState('')
   const fibo = (e) => {
     const resp = fibonacci(e).toString().replaceAll(',', ', ')
-    setWords('')
+    
+    document.getElementById('repeated').value = "";
+    document.getElementById('fizzbuzz').value = "";
+  
+    setWords(''); 
     setFizzbuzz('')
     setCalFibo(resp)
   }
@@ -21,6 +25,10 @@ function Logic() {
   const [words, setWords] = useState('')
   const repeated = (e) => {
     const resp =JSON.stringify(repeatedWords(e)).replace(/[{}"]/g, "").replaceAll(',', ', ')
+    
+    document.getElementById("fibonacci").value = "";
+    document.getElementById('fizzbuzz').value = "";
+
     setCalFibo('')
     setFizzbuzz('')
     setWords(resp)
@@ -30,6 +38,10 @@ function Logic() {
   const [calFizzbuzz, setFizzbuzz] = useState('')
   const fizz = (e) => {
     const resp = fizzbuzz(e).replaceAll(',', ', ')
+    
+    document.getElementById("fibonacci").value = "";
+    document.getElementById('repeated').value = "";
+
     setCalFibo('')
     setWords('')
     setFizzbuzz(resp)
@@ -67,9 +79,11 @@ function Logic() {
         </div>
       </div>
       <div className='result'> 
-          <div>{calFizzbuzz}</div>
-          <div> {calFibo} </div> 
-          <div> {words} </div>
+          <div>
+            {calFizzbuzz}
+            {calFibo}  
+            {words} 
+          </div>
       </div>
 
     </div>

@@ -34,6 +34,7 @@
 			border-color: rgb(160, 166, 164);
 			border-radius: 5px;
 			outline: none;
+			text-align: center;
 			&:focus {
 				border: 2px solid rgb(77, 77, 84);
 			}
@@ -46,6 +47,7 @@
 			border-color: rgb(160, 166, 164);
 			border-radius: 5px;
 			outline: none;
+			text-align: center;
 			&:focus {
 				border: 2px solid rgb(77, 77, 84);
 			}
@@ -71,19 +73,16 @@
 	}
 }
 .result div{
-	position: fixed;
 	top: 60%;
-	left: 50%;
-	align-items: center;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	transform: translate(20%, -118%);
 	color: rgb(75, 73, 73);
-	width: 90vw;
-	max-height: 400px;
+	width: 70vw;
+    height: 400px;
 	font-size: 30px;
-    overflow-wrap:break-word;
-	overflow-y: auto;
-	text-align: center;
+	overflow: auto;
+	text-align: justify;
+	scrollbar-width: none;
+	
 	
 
     
@@ -102,6 +101,9 @@ and (orientation: portrait)   {
 	.container {
 		display: list-item;
 		padding: 0px;
+		width: 150px;
+		margin-left: 30%;
+		
 		h1 {
 			font-size: 10px;
 			text-transform: uppercase;
@@ -110,9 +112,10 @@ and (orientation: portrait)   {
 		.item {
 			box-shadow: 1px 1px 5px rgba(136, 136, 136, 0.937);
 			padding: 0px;
-			margin-top: 5px;
+			margin-top: 10px;
 			height: 10vh;
-			background: rgba(96, 129, 137, 0.082);
+			border-radius: 10px;
+			
 
 			input {
 				width: 110px;
@@ -127,6 +130,7 @@ and (orientation: portrait)   {
 				background: linear-gradient(90deg, rgb(50 84 85 / 82%) 0%, #00c7d6bf 100%);
 				height: 5vw;
 				font-size: 8px;
+				margin-top: 5px;
 
 				&:hover {
 					background: linear-gradient(90deg, rgba(37, 75, 103, 0.992) 0%, #16a9b482 100%);
@@ -134,6 +138,11 @@ and (orientation: portrait)   {
 				}
 			}
 		}
+		
+	}
+	.result div{
+		transform: translate(20%, -75%);
+		font-size: 20px;
 	}
 
   }
@@ -142,6 +151,71 @@ and (orientation: portrait)   {
 
 @media  only screen 
 and (min-device-width: 410px) 
+and (orientation: landscape)  {
+
+}
+
+
+/* MID RESOLUTION with small screen such as Iphone SE, Samsung Galaxy S8+ */ 
+
+/****** PORTRAIT *************/
+
+@media  only screen 
+and (min-device-width: 310px) 
+and (orientation: portrait)  {
+	.container {
+		display: list-item;
+		padding: 0px;
+		width: 150px;
+		margin-left: 30%;
+		
+		h1 {
+			font-size: 10px;
+			text-transform: uppercase;
+			padding: 0px;
+		}
+		.item {
+			box-shadow: 1px 1px 5px rgba(136, 136, 136, 0.937);
+			padding: 0px;
+			margin-top: 10px;
+			height: 85px;
+			border-radius: 10px;
+			
+
+			input {
+				width: 110px;
+				font-size: 10px;
+			}
+			textarea {
+				font-size: 10px;
+			}
+
+			button {
+				width: 110px;
+				background: linear-gradient(90deg, rgb(50 84 85 / 82%) 0%, #00c7d6bf 100%);
+				height: 5vw;
+				font-size: 8px;
+				margin-top: 5px;
+
+				&:hover {
+					background: linear-gradient(90deg, rgba(37, 75, 103, 0.992) 0%, #16a9b482 100%);
+					color: rgb(32, 31, 31)
+				}
+			}
+		}
+		
+	}
+	.result div{
+		transform: translate(20%, -70%);
+		font-size: 20px;
+		height: 300px;
+	}
+}
+
+/****** LANDSCAPE *************/
+
+@media  only screen 
+and (min-device-width: 310px) 
 and (orientation: landscape)  {
 
 }
