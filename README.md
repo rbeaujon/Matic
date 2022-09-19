@@ -18,11 +18,11 @@ Front-End: React, JS and SCSS
 #### Laptop
 <img src="/assets/screenshots/logic/laptop.png" width="80%">
 
-#### Ipad
-<img src="/assets/screenshots/logic/ipad.png" width="80%">
-
 #### Mobile
-<img src="/assets/screenshots/logic/mobile.png" width="80%">
+<img src="/assets/screenshots/logic/mobile.png" width="45%">
+
+#### Ipad
+<img src="/assets/screenshots/logic/ipad.png" width="40%">
 
 
 ### Articles
@@ -31,7 +31,7 @@ Front-End: React, JS and SCSS
 <img src="/assets/screenshots/articles/laptop.png" width="80%">
 
 #### Mobile
-<img src="/assets/screenshots/articles/mobile.png" width="80%">
+<img src="/assets/screenshots/articles/mobile.png" width="45%">
 
 #### Previous Articles
 <img src="/assets/screenshots/previousArticles.png" width="80%">
