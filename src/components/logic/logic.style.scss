@@ -1,37 +1,52 @@
 .Logic {
-	background-color: #F9F9F9;
+	background-color: #ffffff;
 	width: 100vw;
 	height: 100vh;
-	position: relative;
 }
 .container {
-	display:grid;
-	padding: 20px;
-	grid-template-columns: 30vw 33vw 30vw;
-	height: 80vh;
-	top: 12vh;
+	position: relative;
+	display: grid;
+	grid-template-columns:  20vw 20vw 20vw;
+	margin-left: 10vw;
 	grid-gap: 0.5vw;
-		& h1{
-		color: rgba(122, 118, 118, 0.779);
-		font-size: 2vw;
-	}
-	 .item{
+	
+	.item {
+		:hover {
+				background: #817a7a1b;
+		}
 		position: relative;
-		padding: 5px;
-		top:10vh;
-		text-align: center;
-		height: 15vw;
-		border-style: solid;
-		border-color: rgb(193, 197, 196);
-		border-radius: 5px;
-		box-shadow: 0px 9px 20px #888888;
-
-		& input {
-			width: 11vw;
+		top:12vh;
+		width: 50vw;
+		margin-left: 10vw;
+		h1{
+			color: rgba(122, 118, 118, 0.779);
+			font-size: 1.5vw;
+			width: 15vw;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		img {
+			width: 15vw;
+			height: 17vh;
+			border-radius: 15px;
+			box-shadow: 5px 0 15px rgba(163, 165, 165, 0.489);
+			
+			&:hover {
+				box-shadow: 2px 0 15px rgba(0, 0, 0, 0.591)
+			}
+		}
+	}
+}
+.gameInputs {
+		input, textarea {
+			position: relative;
+			top: 20vh;
+			width: 20vw;
+			margin-left: 30vw;
 			height: 5vw;
 			font-size: 1vw;
 			border-style: solid;
-			border-color: rgb(160, 166, 164);
+			border-color: rgba(160, 166, 164, 0.601);
 			border-radius: 5px;
 			outline: none;
 			text-align: center;
@@ -39,56 +54,43 @@
 				border: 2px solid rgb(77, 77, 84);
 			}
 		}
-		& textarea{
-			width: 28vw;
-			height: 6vw;
-			font-size: 1vw;
-			border-style: solid;
-			border-color: rgb(160, 166, 164);
-			border-radius: 5px;
-			outline: none;
-			text-align: center;
-			&:focus {
-				border: 2px solid rgb(77, 77, 84);
-			}
-		}
-		& button {
+		button {
 			background: linear-gradient(90deg, #31CF75 0%, #2DBBC6 100%);
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-			border-radius: 5px;
+			border-radius: 7px;
 			border:0;
 			color:rgb(255, 255, 255);
-			width: 170px;
-			height: 2vw;
-			margin-top: 0.2vw;
-			font-size: 1vw;
-			&.words {
-				width: 28vw;
+			top: 90vh;
+			margin-top: 10vh;
+			width: 20vw;
+			height: 5.3vw;
+			margin-left: 52vw;
+			button {
+				width: 170px;
+				height: 2vw;
+				font-size: 1vw;
+				&.words {
+					width: 28vw;
+				}
+				&:hover {
+					background: linear-gradient(90deg, #2d9b5d 0%, #2b7378 100%);
+					color:rgb(242, 245, 242);
+				}
 			}
-			&:hover {
-				background: linear-gradient(90deg, #2d9b5d 0%, #2b7378 100%);
-				color:rgb(242, 245, 242);
-			}
+
 		}
-	}
 }
-.result div{
-	top: 60%;
-	transform: translate(20%, -118%);
+.result div {
+	margin: 9vh 0 0 15vw;
 	color: rgb(75, 73, 73);
 	width: 70vw;
-    height: 400px;
+    height: 20vh;
 	font-size: 30px;
 	overflow: auto;
-	text-align: justify;
-	scrollbar-width: none;
-	
-	
-
-    
-
-		
+	text-align: center;
+	scrollbar-width: none;		
 }
+
 /* RESPONSIVE DESIGN FOR MOBILE */
 
 /* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
@@ -100,52 +102,40 @@ and (min-width : 320px)
 and (max-width : 568px) 
 and (orientation: portrait)   {
 	.container {
-		display: list-item;
-		padding: 0px;
-		width: 150px;
-		margin-left: 30%;
-		
-		h1 {
-			font-size: 10px;
-			text-transform: uppercase;
-			padding: 0px;
-		}
+		grid-template-columns:  25vw 25vw 25vw;
+		margin-left: 0vw;
+		grid-gap: 2vw;
 		.item {
-			box-shadow: 1px 1px 5px rgba(136, 136, 136, 0.937);
-			padding: 0px;
-			margin-top: 10px;
-			height: 10vh;
-			border-radius: 10px;
-			
-
-			input {
-				width: 110px;
-				font-size: 10px;
+			h1 {
+				font-size: 2.2vw;
+				width: 25vw;
 			}
-			textarea {
-				font-size: 10px;
+			img {
+				width: 25vw;
+				height: 27vh;
 			}
-
-			button {
-				width: 110px;
-				background: linear-gradient(90deg, rgb(50 84 85 / 82%) 0%, #00c7d6bf 100%);
-				height: 5vw;
-				font-size: 8px;
-				margin-top: 5px;
-
-				&:hover {
-					background: linear-gradient(90deg, rgba(37, 75, 103, 0.992) 0%, #16a9b482 100%);
-					color: rgb(32, 31, 31)
-				}
-			}
+	}
+	}
+	.gameInputs {
+		input, textarea {
+			top: 15vh;
+			width: 25vw;
+			margin-left: 22vw;
+			height: 7vw;
+			font-size: 2vw;
 		}
-		
+		button {
+			top: 90vh;
+			margin-top: 10.5vh;
+			width: 25vw;
+			height: 7.8vw;
+			font-size: 2vw;
+		}
 	}
 	.result div{
-		transform: translate(20%, -75%);
 		font-size: 20px;
+		height: 30vh;
 	}
-
   }
 
 /****** LANDSCAPE *************/
@@ -166,51 +156,39 @@ and (min-width : 569px)
 and (max-width : 1024px) 
 and (orientation: portrait)  {
 	.container {
-		display: list-item;
-		padding: 0px;
-		width: 150px;
-		margin-left: 30%;
-		
-		h1 {
-			font-size: 10px;
-			text-transform: uppercase;
-			padding: 0px;
-		}
+		grid-template-columns:  25vw 25vw 25vw;
+		margin-left: 0vw;
+		grid-gap: 2vw;
 		.item {
-			box-shadow: 1px 1px 5px rgba(136, 136, 136, 0.937);
-			padding: 0px;
-			margin-top: 10px;
-			height: 85px;
-			border-radius: 10px;
-			
-
-			input {
-				width: 110px;
-				font-size: 10px;
+			h1 {
+				font-size: 2.2vw;
+				width: 25vw;
 			}
-			textarea {
-				font-size: 10px;
+			img {
+				width: 25vw;
+				height: 27vh;
 			}
-
-			button {
-				width: 110px;
-				background: linear-gradient(90deg, rgb(50 84 85 / 82%) 0%, #00c7d6bf 100%);
-				height: 5vw;
-				font-size: 8px;
-				margin-top: 5px;
-
-				&:hover {
-					background: linear-gradient(90deg, rgba(37, 75, 103, 0.992) 0%, #16a9b482 100%);
-					color: rgb(32, 31, 31)
-				}
-			}
+	}
+	}
+	.gameInputs {
+		input, textarea {
+			top: 17vh;
+			width: 25vw;
+			margin-left: 22vw;
+			height: 7vw;
+			font-size: 2vw;
 		}
-		
+		button {
+			top: 91vh;
+			margin-top: 10.5vh;
+			width: 25vw;
+			height: 7.8vw;
+			font-size: 2vw;
+		}
 	}
 	.result div{
-		transform: translate(20%, -70%);
 		font-size: 20px;
-		height: 300px;
+		height: 30vh;
 	}
 }
 

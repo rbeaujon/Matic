@@ -13,6 +13,26 @@ Front-End: React, JS and SCSS
 
 ## Views
 
+### Logic Games
+
+#### Laptop
+<img src="/assets/screenshots/logic/laptop.png" width="80%">
+
+#### Ipad
+<img src="/assets/screenshots/logic/ipad.png" width="80%">
+
+#### Mobile
+<img src="/assets/screenshots/logic/mobile.png" width="80%">
+
+
+### Articles
+
+#### Laptop
+<img src="/assets/screenshots/articles/laptop.png" width="80%">
+
+#### Mobile
+<img src="/assets/screenshots/articles/mobile.png" width="80%">
+
 #### Previous Articles
 <img src="/assets/screenshots/previousArticles.png" width="80%">
 
@@ -25,8 +45,6 @@ Front-End: React, JS and SCSS
 #### Add Articles
 <img src="/assets/screenshots/addArticles.png" width="80%">
 
-#### Logic
-<img src="/assets/screenshots/logic.png" width="80%">
 
 ## Project Hosting
 
