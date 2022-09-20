@@ -1,4 +1,4 @@
-The following project is an application created in React version 18.2.0 to show 3 logic functions (Fibonacci, Count Words, FizzBuzz) and one SPA to manages one CRUD API .
+The following project is an application created in React version 18.2.0 to show 3 logic functions (Fibonacci, Count Words, FizzBuzz) and one SPA that manage one CRUD API.
 <p>
 The App has unit testing for all modules with JEST using react-scripts: 5.0.1.
 <p>
@@ -73,4 +73,3 @@ Remote [https://aistica.com/matic]
     * Loading for Previous Articles
     * Media queries for landscape.
     * Improve errors detections.
-    * Perform automated tests.
