@@ -60,9 +60,8 @@ Front-End: React, JS and SCSS
 
 In the project directory, you can run:
 
-### `ng serve`
+### Browser view
 
-Browser view
 Local [http://localhost:3000]
 
 Remote [https://aistica.com/matic]
