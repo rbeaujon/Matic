@@ -60,7 +60,13 @@ Front-End: React, JS and SCSS
 
 In the project directory, you can run:
 
-### Browser view
+### npm run xxxx
+    start: Run this script to execute the development server available for your React application.
+    test:  In order to run the testing mode, using react-scripts: 5.0.1
+    build: This sets and creates a build directory with a production build of your app
+
+
+#### Browser views
 
 Local [http://localhost:3000]
 
