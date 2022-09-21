@@ -9,6 +9,7 @@
 	grid-template-columns:  20vw 20vw 20vw;
 	margin-left: 10vw;
 	grid-gap: 0.5vw;
+	height: 40vh;
 	
 	.item {
 		:hover {
@@ -27,7 +28,7 @@
 		}
 		img {
 			width: 15vw;
-			height: 17vh;
+			height: 20vh;
 			border-radius: 15px;
 			box-shadow: 5px 0 15px rgba(163, 165, 165, 0.489);
 			
@@ -38,12 +39,13 @@
 	}
 }
 .gameInputs {
+	width: 100vw;
 		input, textarea {
-			position: relative;
-			top: 20vh;
+			position: absolute;
+			margin-top: 0vh;
 			width: 20vw;
 			margin-left: 30vw;
-			height: 5vw;
+			height: 5vh;
 			font-size: 1vw;
 			border-style: solid;
 			border-color: rgba(160, 166, 164, 0.601);
@@ -55,15 +57,14 @@
 			}
 		}
 		button {
+			position: absolute;
 			background: linear-gradient(90deg, #31CF75 0%, #2DBBC6 100%);
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 			border-radius: 7px;
-			border:0;
+			border: 0;
 			color:rgb(255, 255, 255);
-			top: 90vh;
-			margin-top: 10vh;
 			width: 20vw;
-			height: 5.3vw;
+			height: 5.3vh;
 			margin-left: 52vw;
 			button {
 				width: 170px;
@@ -105,6 +106,7 @@ and (orientation: portrait)   {
 		grid-template-columns:  25vw 25vw 25vw;
 		margin-left: 0vw;
 		grid-gap: 2vw;
+		height: 40vh;
 		.item {
 			h1 {
 				font-size: 2.2vw;
@@ -112,23 +114,23 @@ and (orientation: portrait)   {
 			}
 			img {
 				width: 25vw;
-				height: 27vh;
+				height: 20vh;
 			}
 	}
 	}
 	.gameInputs {
 		input, textarea {
-			top: 15vh;
+			position: absolute;
 			width: 25vw;
 			margin-left: 22vw;
-			height: 7vw;
+			height: 4vh;
 			font-size: 2vw;
+			border: 0.5 rgb(178, 174, 174);
 		}
 		button {
-			top: 90vh;
-			margin-top: 10.5vh;
+			position: absolute;
 			width: 25vw;
-			height: 7.8vw;
+			height: 4.5vh;
 			font-size: 2vw;
 		}
 	}
@@ -159,6 +161,7 @@ and (orientation: portrait)  {
 		grid-template-columns:  25vw 25vw 25vw;
 		margin-left: 0vw;
 		grid-gap: 2vw;
+		height: 45vh;
 		.item {
 			h1 {
 				font-size: 2.2vw;
@@ -166,29 +169,30 @@ and (orientation: portrait)  {
 			}
 			img {
 				width: 25vw;
-				height: 27vh;
+				height: 20vh;
 			}
 	}
 	}
 	.gameInputs {
 		input, textarea {
-			top: 17vh;
+			position: absolute;;
 			width: 25vw;
 			margin-left: 22vw;
-			height: 7vw;
+			margin-top: 0px;
+			height: 7vh;
 			font-size: 2vw;
 		}
 		button {
-			top: 91vh;
-			margin-top: 10.5vh;
+			position: absolute;
 			width: 25vw;
-			height: 7.8vw;
+			height: 7.4vh;
 			font-size: 2vw;
 		}
 	}
 	.result div{
-		font-size: 20px;
+		font-size: 25px;
 		height: 30vh;
+		margin-top: 15vh;
 	}
 }
 

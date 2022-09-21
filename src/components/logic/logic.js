@@ -101,24 +101,17 @@ function Logic() {
       <div className='gameInputs'>
         <div  className={showFibo}>
           <input type="text" id="fibonacci"  placeholder="write a number"/>
-          <div>
-            <button  onClick={() => fibo(document.getElementById('fibonacci').value)}>Calculate Fibonacci</button>
-          </div>
+          <button  onClick={() => fibo(document.getElementById('fibonacci').value)}>Calculate Fibonacci</button>
         </div>
         <div  className={showWords}>
           <textarea  id="repeated"  placeholder="write a phrase"/>
-          <div>
             <button className='words' onClick={() => repeated(document.getElementById('repeated').value)}>Check Repeated Words</button>
-          </div>
         </div>
         <div  className={showFizz}>
           <input type="text" id="fizzbuzz"  placeholder="insert a number"/>
-          <div >
             <button onClick={() => fizz(document.getElementById('fizzbuzz').value)}>Show FizzBuzz</button>
-          </div>
         </div>
       </div>
-
       <div className='result'> 
           <div>
             {calFizzbuzz}
