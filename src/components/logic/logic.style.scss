@@ -4,7 +4,6 @@
 	height: 100vh;
 }
 .container {
-	position: relative;
 	display: grid;
 	grid-template-columns:  20vw 20vw 20vw;
 	margin-left: 10vw;
@@ -16,12 +15,12 @@
 				background: #817a7a1b;
 		}
 		position: relative;
-		top:12vh;
+		top:7vh;
 		width: 50vw;
 		margin-left: 10vw;
 		h1{
 			color: rgba(122, 118, 118, 0.779);
-			font-size: 1.5vw;
+			font-size: 1vw;
 			width: 15vw;
 			text-transform: uppercase;
 			text-align: center;
@@ -51,7 +50,8 @@
 			border-color: rgba(160, 166, 164, 0.601);
 			border-radius: 5px;
 			outline: none;
-			text-align: center;
+			text-align: center;	
+			vertical-align: middle;
 			&:focus {
 				border: 2px solid rgb(77, 77, 84);
 			}
@@ -60,16 +60,18 @@
 			position: absolute;
 			background: linear-gradient(90deg, #31CF75 0%, #2DBBC6 100%);
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-			border-radius: 7px;
+			border-radius: 5px;
 			border: 0;
+			margin-top: 0vh;
 			color:rgb(255, 255, 255);
-			width: 20vw;
+			width: 15vw;
 			height: 5.3vh;
-			margin-left: 52vw;
+			margin-left: 54vw;
+			font-size: 1vw;
 			button {
-				width: 170px;
+				width: 5vw;
 				height: 2vw;
-				font-size: 1vw;
+				
 				&.words {
 					width: 28vw;
 				}
@@ -94,7 +96,8 @@
 
 /* RESPONSIVE DESIGN FOR MOBILE */
 
-/* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
+
+/* HIGH RESOLUTION such as  IPHONE 5, IPHONE SE 2016  until IPHONE 13Pro until mid range */
 
 
 /****** PORTRAIT *************/
@@ -114,13 +117,12 @@ and (orientation: portrait)   {
 			}
 			img {
 				width: 25vw;
-				height: 20vh;
+				height: 25vh;
 			}
 	}
 	}
 	.gameInputs {
 		input, textarea {
-			position: absolute;
 			width: 25vw;
 			margin-left: 22vw;
 			height: 4vh;
@@ -128,7 +130,6 @@ and (orientation: portrait)   {
 			border: 0.5 rgb(178, 174, 174);
 		}
 		button {
-			position: absolute;
 			width: 25vw;
 			height: 4.5vh;
 			font-size: 2vw;
@@ -143,7 +144,8 @@ and (orientation: portrait)   {
 /****** LANDSCAPE *************/
 
 @media  only screen 
-and (min-device-width: 410px) 
+and (min-width : 320px)
+and (max-width : 568px)  
 and (orientation: landscape)  {
 
 }
@@ -161,7 +163,7 @@ and (orientation: portrait)  {
 		grid-template-columns:  25vw 25vw 25vw;
 		margin-left: 0vw;
 		grid-gap: 2vw;
-		height: 45vh;
+		height: 40vh;
 		.item {
 			h1 {
 				font-size: 2.2vw;
@@ -169,7 +171,7 @@ and (orientation: portrait)  {
 			}
 			img {
 				width: 25vw;
-				height: 20vh;
+				height: 25vh;
 			}
 	}
 	}

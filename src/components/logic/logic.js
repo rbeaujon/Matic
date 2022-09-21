@@ -81,7 +81,7 @@ function Logic() {
 
   return (
     <div className="Logic">        
-      <div className='menu'>
+      <div>
         <Menu />
       </div>
       <div className='container'>
