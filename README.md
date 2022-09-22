@@ -8,7 +8,7 @@ The API is https://www.api.recruitment.matic.io/docs/#/Articles/. The design was
 
 Front-End: React, JS and SCSS
 
-<img src="/assets/documentation/diagram.png" width="80%">
+<img src="/assets/documentation/diagram1.png" width="80%">
 
 ## Views
 
@@ -81,6 +81,5 @@ Remote [https://aistica.com/matic]
 ## Out of scopes
   
     * More elegant UI.
-    * A loading for Previous Articles
     * Media queries for landscape.
     * Improve errors detections.

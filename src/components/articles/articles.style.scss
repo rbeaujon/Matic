@@ -21,29 +21,28 @@
 }
 .addArticle {
 	position: relative;
-	height: 800px;
-	top: 40px;
+	height: 110vh;
+	top: 10vh;
 	.containerNewArticle {
 		border-style: groove;
 		position: absolute;
-		height: 70vh;
-		width: 50vw;
+		height: 78vh;
+		width: 52vw;
 		left: 25vw;
-		top: 86px;
+		top: 15vh;
 		background: #FFFFFF;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 		border-radius: 41px;
-		label {
+		& div label {
 			font-family: 'Public Sans';
 			font-style: normal;
-			font-size: 16px;
+			font-size: 1vw;
 			line-height: 20px;
 			
 		}
 
 		& #author {
-			padding: 32px 50px 15px;
-
+			padding: 4vh 3.5vw 1vh;
 			input {		
 				width: 43vw;
 				height: 10vh;
@@ -57,7 +56,7 @@
 			}
 		}
 		& #blogTitle {
-			padding: 0px 50px;
+			padding: 0 3.5vw;
 			input {		
 				width: 43vw;
 				height: 10vh;
@@ -73,7 +72,7 @@
 			}
 		}
 		& #blogContent {
-			padding: 15px 50px;
+			padding: 1vh 3.5vw;
 			textarea  {
 				box-sizing: border-box;
 				width: 43.5vw;
@@ -90,11 +89,11 @@
 		& button {
 			position: absolute;
 			width: 43vw;
-			height: 50px;
-			margin: 10px 0px 32px 45px;
+			height: 5vh;
+			margin: 1vh 0 3vh 3.5vw;
 			background: linear-gradient(90deg, #84E1A7 0%, #81D6DB 100%);
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-			border-radius: 47px;
+			border-radius: 7px;
 			border:0px;
 			color:white;
 			&:hover {
@@ -221,7 +220,7 @@
 }
 .previousArticles {
 	position: relative; 
-	height: 700px; 
+	height: 110vh;
 }
 .showArticles {
 	width: 100vw;
@@ -356,15 +355,15 @@ and (max-width : 568px)
 and (orientation: portrait)   {
 	.articles .mainTitle {
 		font-weight: 100px;
-		font-size: 10px;
+		font-size: 16px;
 	}
 	.addArticle {
-		height: 780px;
 		.containerNewArticle {
 				width: 80vw;
+				height: 77vh;
 				left: 8vw;
-				label {
-					font-size: 12px;
+				div label {
+					font-size: 2.5vw;
 				}
 				#author {
 					padding: 32px 15px 15px; 

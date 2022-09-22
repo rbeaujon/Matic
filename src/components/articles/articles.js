@@ -7,6 +7,8 @@ const Dashboard = () => {
 	const [articles, setArticles] = useState();
 	const [lastest, setLastest] = useState();
 	const [show, setShow] = useState("hidden");
+	const [showLoader, setShowLoader] = useState("show")
+	const [showInfo, setShowInfo] = useState("hidden")
 
 
 	const getArticles = async () => {
@@ -20,10 +22,19 @@ const Dashboard = () => {
 			body: JSON.stringify({a: 1, b: 'Textual content'})
 		  };
 		const resp = await Articles(header);
-		const data = await resp.data
-		
-		setArticles(data)
-		setLastest(data.slice(-4))
+
+		if (resp.statusCode === 200) {
+			const data = await resp.data
+			
+			setArticles(data)
+			setLastest(data.slice(-4))
+			setShowInfo("show")
+			setShowLoader("hidden")
+		}else {
+			const errorResponse =[{"status":resp.status}, {"error":resp.statusText}]
+			return errorResponse;
+		}
+
 	}
 	const postArticles = async () => {
 		const newPost = {
@@ -158,32 +169,36 @@ const Dashboard = () => {
 			</div>
 			<div className='previousArticles'>
 				<div className='mainTitle'>Previous Articles</div>
-				
-				<div className='showArticles'>
-					<table>
-						<tr>
-							<th>Author</th>
-							<th>Title</th>
-							<th>Content</th>
-							<th>Date</th>
-							<th></th>
-							<th></th>
-						</tr>
-					{articles && articles.map((key) => {
-						return ( 
+				<div className={showLoader}>
+					<div className='spinLoader'></div>
+				</div>
+				<div className={showInfo}>
+					<div className='showArticles'>
+						<table>
 							<tr>
-								<td id="author">{key.author}</td>
-								<td id="title">{key.title}</td>
-								<td id="content">{key.content}</td>
-								<td id="date">{(key.createdAt).slice(0,10).split('-').reverse().join('/')}</td>
-								<td id="delete" onClick={()=> delArticle(key.id)}>Delete</td>
-								<td id="edit" onClick={() => { setShow("show"); fillEditArticles(key.author,key.title, key.content, key.id) }}>Edit</td>
+								<th>Author</th>
+								<th>Title</th>
+								<th>Content</th>
+								<th>Date</th>
+								<th></th>
+								<th></th>
 							</tr>
-						
-							) 
-						})}
-					</table>
-				</div>	
+						{articles && articles.map((key) => {
+							return ( 
+								<tr>
+									<td id="author">{key.author}</td>
+									<td id="title">{key.title}</td>
+									<td id="content">{key.content}</td>
+									<td id="date">{(key.createdAt).slice(0,10).split('-').reverse().join('/')}</td>
+									<td id="delete" onClick={()=> delArticle(key.id)}>Delete</td>
+									<td id="edit" onClick={() => { setShow("show"); fillEditArticles(key.author,key.title, key.content, key.id) }}>Edit</td>
+								</tr>
+							
+								) 
+							})}
+						</table>
+					</div>	
+				</div>
 			</div>	
 			<div className={show}>
 			<div className='editArticles '>
@@ -210,19 +225,24 @@ const Dashboard = () => {
 			</div>
 			<div className='latestArticles'>
 				<div className='mainTitle'>Lastest Articles</div>
-				<div className='containerLastArticles'>
-				{lastest && lastest.map((key) => {
-					return (
-						<>
-						<div>
-							<img src={key.imageUrl} alt={key.title}></img>	
-							<div id='author'>by {key.author}</div>
-							<div id='title'>{key.title}</div>
-							<div id='content'>{key.content}</div>
-						</div>
-						</>
-					)
-				})}
+				<div className={showLoader}>
+					<div className='spinLoader'></div>
+				</div>
+				<div className={showInfo}>
+					<div className='containerLastArticles'>
+					{lastest && lastest.map((key) => {
+						return (
+							<>
+							<div>
+								<img src={key.imageUrl} alt={key.title}></img>	
+								<div id='author'>by {key.author}</div>
+								<div id='title'>{key.title}</div>
+								<div id='content'>{key.content}</div>
+							</div>
+							</>
+						)
+					})}
+					</div>
 				</div>
 			</div>
 			<div className='footer'>
