@@ -28,8 +28,8 @@ const Dashboard = () => {
 			
 			setArticles(data)
 			setLastest(data.slice(-4))
-			//setShowInfo("show")
-			//setShowLoader("hidden")
+			setShowInfo("show")
+			setShowLoader("hidden")
 		}else {
 			const errorResponse =[{"status":resp.status}, {"error":resp.statusText}]
 			return errorResponse;
